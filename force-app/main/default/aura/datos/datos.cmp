@@ -1,0 +1,10 @@
+<aura:component>
+	<aura:attribute name="num1" type="Integer" />
+	<aura:attribute name="num2" type="Integer" />
+	<input type="text" value="{!v.num1}" aura:id="input1" onchange="{!c.saveNum1}" />
+	<input type="text" value="{!v.num2}" aura:id="input2" onchange="{!c.saveNum2}" />
+	<button onclick="{!c.sumar}">Sumar</button>
+	<div>
+		{!v.resultado}
+	</div>
+</aura:component>	
