@@ -8,10 +8,10 @@
         var num2 = component.get("v.num2");
         console.log(num2);
         var sumador = component.get("c.sumador");
-        sumador.setCallback(function(response){
+        sumador.setCallback(this, function(response){
             var state = response.getState();
             if(state === "SUCCESS"){
-                resultado = response.getReturnValue();
+                var resultado = response.getReturnValue();
                 component.set("v.resultado", resultado);
             }
         });
